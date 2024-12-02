@@ -1,6 +1,5 @@
 <script>
     import { onMount } from 'svelte';
-    import { elems } from '../stores/store';
 
     import VocabPool from '../components/VocabPool.svelte';
     import PhraseMaker from '../components/PhraseMaker.svelte';
@@ -30,7 +29,7 @@
 
 <section id="main-sb" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
 
-    <VocabPool bind:this={VocabPoolRef} {vocab} phrasebar={PhraseMakerRef} />
+    <VocabPool bind:this={VocabPoolRef} {vocab} />
     <PhraseMaker bind:this={PhraseMakerRef} />
 
 </section>

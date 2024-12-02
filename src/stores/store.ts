@@ -1,3 +1,3 @@
 import { writable } from "svelte/store";
 
-export const elems = writable<{}>();
+export const elems = writable();
