@@ -1,0 +1,12 @@
+{
+    "files.exclude": {
+        "{s,[!s]*,sr,s[!r]*,sr[!c]*,src?*}": true
+    },
+    "folder-scopes.scopes": {
+        "Focus": {
+            "nl": {
+                "scopedFolderPath": "src"
+            }
+        }
+    }
+}

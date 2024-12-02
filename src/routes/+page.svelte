@@ -1,10 +1,19 @@
 <script>
     import { onMount } from 'svelte';
-    import { readable, writable } from 'svelte/store';
+    import { elems } from '../stores/store';
 
-    import VocabBox from '../components/BoxVocab.svelte';
-    import PhraseBar from '../components/PhraseBar.svelte';
+    import VocabPool from '../components/VocabPool.svelte';
+    import PhraseMaker from '../components/PhraseMaker.svelte';
 
+    let VocabPoolRef;
+    let PhraseMakerRef;
+
+    onMount(() => {
+        elems.set(VocabPoolRef);
+        elems.set(PhraseMakerRef);
+    });
+
+    // Turn into readable store?
     let vocab = [
         { dutch: "Hallo!", english: "Hello!", type: "GREETING"},
         { dutch: "Goede-", english: "Good-", type: "GREETING"},
@@ -16,15 +25,14 @@
         { dutch: "Naam", english: "Name", type: "ZN"},
         { dutch: "Is", english: "Is", type: "BVNW"}
     ];
-
 </script>
 
 <main id="main" class="h-screen content-center bg-red-200">
 
 <section id="" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
 
-    <VocabBox {vocab} />
-    <PhraseBar />
+    <VocabPool bind:this={VocabPoolRef} {vocab} />
+    <PhraseMaker bind:this={PhraseMakerRef} />
 
 </section>
 
