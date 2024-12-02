@@ -9,11 +9,14 @@
     let PhraseMakerRef;
 
     onMount(() => {
-        elems.set(VocabPoolRef);
-        elems.set(PhraseMakerRef);
+        elems.update(elm => {
+            elm.add(VocabPoolRef);
+            elm.add(PhraseMakerRef);
+            return elm;
+        });
     });
 
-    // Turn into readable store?
+    // Turn into readable store? Retrieve from database?
     let vocab = [
         { dutch: "Hallo!", english: "Hello!", type: "GREETING"},
         { dutch: "Goede-", english: "Good-", type: "GREETING"},

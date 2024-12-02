@@ -1,10 +1,15 @@
 <script>
-    //import { ToggleSection } from '$lib/utils.js';
+    import { elems } from '../stores/store';
+    import { get } from 'svelte/store';
+
     export let word;
-    export let fToggleSection;
+
+    const elements = get(elems);
+
+    console.log(elements);
 </script>
 
-<button class="cursor-pointer flex flex-col justify-center gap-0 bg-gray-200 items-center p-1 m-1" on:click={(event) => fToggleSection(event.currentTarget)}>
+<button class="cursor-pointer flex flex-col justify-center gap-0 bg-gray-200 items-center p-1 m-1" on:click={(e) => fToggleSection(e.currentTarget)}>
     <span class="border-b-2 border-b-gray-400">{word.dutch}</span>
     <span class="border-t-2 border-t-gray-400">{word.english}</span>
 </button>

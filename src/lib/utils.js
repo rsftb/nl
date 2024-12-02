@@ -1,5 +1,5 @@
-/*
-export function FactoryToggleSection(eBoxVocab, ePhrase) {
+
+export function fFactoryToggleSection(eBoxVocab, ePhrase) {
 
     function f(elem) {
         eBoxVocab.classList.toggle('hidden');
@@ -11,4 +11,3 @@ export function FactoryToggleSection(eBoxVocab, ePhrase) {
 
     return f;
 }
-*/
