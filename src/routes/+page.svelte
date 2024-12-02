@@ -9,11 +9,7 @@
     let PhraseMakerRef;
 
     onMount(() => {
-        elems.update(elm => {
-            elm.add(VocabPoolRef);
-            elm.add(PhraseMakerRef);
-            return elm;
-        });
+        console.log("Page mounted");
     });
 
     // Turn into readable store? Retrieve from database?
@@ -32,9 +28,9 @@
 
 <main id="main" class="h-screen content-center bg-red-200">
 
-<section id="" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
+<section id="main-sb" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
 
-    <VocabPool bind:this={VocabPoolRef} {vocab} />
+    <VocabPool bind:this={VocabPoolRef} {vocab} phrasebar={PhraseMakerRef} />
     <PhraseMaker bind:this={PhraseMakerRef} />
 
 </section>

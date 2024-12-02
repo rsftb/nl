@@ -1,12 +1,8 @@
 <script>
-    import { elems } from '../stores/store';
-    import { get } from 'svelte/store';
+	import { on } from 'svelte/events';
 
     export let word;
-
-    const elements = get(elems);
-
-    console.log(elements);
+    export let fToggleSection;
 </script>
 
 <button class="cursor-pointer flex flex-col justify-center gap-0 bg-gray-200 items-center p-1 m-1" on:click={(e) => fToggleSection(e.currentTarget)}>
