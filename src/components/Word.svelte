@@ -1,10 +1,17 @@
 <script>
-	import { on } from 'svelte/events';
+	//import { on } from 'svelte/events';
+    import { get } from 'svelte/store';
+    import { elems } from '../stores/store';
+
+    function f(e) {
+        console.log(get(elems));
+        console.log(e.target);
+    }
 
     export let word;
 </script>
 
-<button class="cursor-pointer flex flex-col justify-center gap-0 bg-gray-200 items-center p-1 m-1">
+<button class="cursor-pointer flex flex-col justify-center gap-0 bg-gray-200 items-center p-1 m-1" on:click={(e) => f(e)}>
     <span class="border-b-2 border-b-gray-400">{word.dutch}</span>
     <span class="border-t-2 border-t-gray-400">{word.english}</span>
 </button>

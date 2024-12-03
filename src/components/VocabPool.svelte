@@ -1,23 +1,20 @@
 <script lang="ts">
+    import { onMount } from 'svelte';
+    import { elems } from '../stores/store';
+
     import Word from './Word.svelte';
-	import { onMount } from 'svelte';
 
     export let vocab;
 
-    function handleWordClick(eWord) {
-        console.log("Word clicked");
-        if (typeof onWordSelected === 'function') {
-            onWordSelected(eWord);
-        }
-    };
+    let vocabsection_bind;
 
     onMount(() => {
         console.log("VocabPool mounted");
     });
 </script>
 
-<div id="vocabsection" class="w-fit max-w-[50%] flex-wrap flex justify-center mx-auto bg-orange-300">
+<div bind:this={vocabsection_bind} id="vocabsection" class="w-fit max-w-[50%] flex-wrap flex justify-center mx-auto bg-orange-300">
     {#each vocab as word}
-        <Word {word} on:click={(e) => handleWordClick(e)} />
+        <Word {word} />
     {/each}
 </div>
