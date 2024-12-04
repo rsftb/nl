@@ -9,6 +9,7 @@
     onMount(() => {
         console.log("Page mounted");
         console.log(get(dataStore));
+        console.log("\n");
     });
 
     // Turn into readable store? Retrieve from database?
@@ -21,11 +22,11 @@
         { dutch: "-nacht", english: "-night", type: "GREETING"},
         { dutch: "Mijn", english: "My", type: "PVNW"},
         { dutch: "Naam", english: "Name", type: "ZN"},
-        { dutch: "Is", english: "Is", type: "BVNW"}
+        { dutch: "Is", english: "Is", type: "BVNW"},
     ];
 </script>
 
-<main id="main" class="h-screen content-center bg-red-200">
+<main id="main" class="h-screen content-center bg-slate-500">
 
 <section id="main-sb" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
 
@@ -42,7 +43,7 @@
         { dutch: "Jij", english: "You"},
         { dutch: "Heb", english: "Have"},
         { dutch: "Hebt", english: "Have"},
-        { dutch: "Ben", english: "Are"},
+        { dutch: "Ben", english: "Am"},
         { dutch: "Bent", english: "Are"},
         { dutch: "Een", english: "A"},
         { dutch: "En", english: "And"},

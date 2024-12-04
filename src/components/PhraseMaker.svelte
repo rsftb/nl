@@ -10,8 +10,8 @@
     });
 </script>
 
-<div id="phrasebuilder-container" class="w-screen bg-red-300">
-    <ul bind:this={phrasebuilder_ul_bind} id="phrasebuilder-ul" class="bg-red-500 mx-auto w-[50%] h-10 rounded-lg">
+<div id="phrasebuilder-container" class="w-screen flex justify-center">
+    <ul bind:this={phrasebuilder_ul_bind} id="phrasebuilder-ul" class="bg-red-600 flex justify-items-center mx-auto w-[50%] h-10 rounded-lg">
     </ul>
 </div>
 

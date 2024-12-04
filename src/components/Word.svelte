@@ -7,14 +7,19 @@
     let button: HTMLButtonElement;
 
     function f(e: MouseEvent) {
-        console.log(e.target);
-        if (get(dataStore).item1.contains(e.target as Node))
-        {
-            console.log("First container");
-        } else if (get(dataStore).item2.contains(e.target as Node))
-        {
-            console.log("Second container");
-        }
+
+        const data = get(dataStore);
+        const target = e.target as Node;
+
+        console.log(data);
+
+        if (data.item1.contains(target))
+            data.item2.appendChild(target);
+        else if (data.item2.contains(e.target as Node))
+            data.item1.appendChild(target);
+        else
+            throw new Error("Element not found in either container");
+
     }
 </script>
 
