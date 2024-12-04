@@ -25,7 +25,7 @@
         height: fit-content;
         padding: 0.5rem;
         margin: 0.5rem;
-        background-color: #f1f1f1;
+        background-color: #eeeeee;
         border: 1px solid #ccc;
         border-radius: 5px;
     }

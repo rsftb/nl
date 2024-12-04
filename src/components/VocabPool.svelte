@@ -1,11 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import type { Component } from 'svelte';
     import { dataStore } from '../stores/store';
+    import { get } from "svelte/store";
 
     import Word from './Word.svelte';
 
-    export let vocab: { dutch: string, english: string, type: string }[];
+    export let vocab: { dutch: string, english: string, type: string, handler: () => void | null}[];
     let vocabsection_bind: HTMLDivElement;
 
     onMount(() => {

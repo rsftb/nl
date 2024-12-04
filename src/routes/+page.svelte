@@ -12,18 +12,26 @@
         console.log("\n");
     });
 
+    function AA() {
+        console.log("Foo");
+    }
+
     // Turn into readable store? Retrieve from database?
     let vocab = [
-        { dutch: "Hallo!", english: "Hello!", type: "GREETING"},
-        { dutch: "Goede-", english: "Good-", type: "GREETING"},
-        { dutch: "-morgen", english: "-morning", type: "GREETING"},
-        { dutch: "-middag", english: "-afternoon", type: "GREETING"},
-        { dutch: "-avond", english: "-evening", type: "GREETING"},
-        { dutch: "-nacht", english: "-night", type: "GREETING"},
-        { dutch: "Mijn", english: "My", type: "PVNW"},
-        { dutch: "Naam", english: "Name", type: "ZN"},
-        { dutch: "Is", english: "Is", type: "BVNW"},
+        { dutch: "Hallo!", english: "Hello!", type: "FU", handler: null},
+        { dutch: "Goede-", english: "Good-", type: "FU", handler: AA},
+        { dutch: "-morgen", english: "-morning", type: "FU", handler: null},
+        { dutch: "-middag", english: "-afternoon", type: "FU", handler: null},
+        { dutch: "-avond", english: "-evening", type: "FU", handler: null},
+        { dutch: "-nacht", english: "-night", type: "FU", handler: null},
+        { dutch: "Mijn", english: "My", type: "PVNW", handler: null},
+        { dutch: "Naam", english: "Name", type: "ZN", handler: null},
+        { dutch: "Is", english: "Is", type: "BVNW", handler: null},
     ];
+
+    let vocab_dict = {
+
+    };
 </script>
 
 <main id="main" class="h-screen content-center bg-slate-500">
