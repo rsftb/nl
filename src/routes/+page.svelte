@@ -1,14 +1,14 @@
 <script>
     import { onMount } from 'svelte';
+    import { get } from 'svelte/store';
+    import { dataStore } from '../stores/store';
 
     import VocabPool from '../components/VocabPool.svelte';
     import PhraseMaker from '../components/PhraseMaker.svelte';
 
-    let VocabPoolRef;
-    let PhraseMakerRef;
-
     onMount(() => {
         console.log("Page mounted");
+        console.log(get(dataStore));
     });
 
     // Turn into readable store? Retrieve from database?
@@ -29,8 +29,8 @@
 
 <section id="main-sb" class="flex flex-col justify-center gap-5 w-auto h-[80%] bg-green-200">
 
-    <VocabPool bind:this={VocabPoolRef} {vocab} />
-    <PhraseMaker bind:this={PhraseMakerRef} />
+    <VocabPool {vocab} />
+    <PhraseMaker />
 
 </section>
 

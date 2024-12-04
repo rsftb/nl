@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
-    import { elems } from '../stores/store';
+    import { dataStore } from '../stores/store';
 
-    let phrasebuilder_ul_bind;
+    let phrasebuilder_ul_bind: HTMLUListElement;
 
-    elems.set(phrasebuilder_ul_bind);
+    onMount(() => {
+        console.log("PhraseMaker mounted");
+        dataStore.setSecond(phrasebuilder_ul_bind);
+    });
 </script>
 
 <div id="phrasebuilder-container" class="w-screen bg-red-300">

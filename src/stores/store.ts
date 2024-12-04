@@ -10,13 +10,15 @@ function createDataStore() {
         subscribe,
         set,
         update,
-        addArray1: (data) => update((store) => {
+        setFirst: (data) => update((store) => {
             store.item1 = data;
             return store;
         }),
-        addArray2: (data) => update((store) => {
+        setSecond: (data) => update((store) => {
             store.item2 = data;
             return store;
         }),
     };
 }
+
+export const dataStore = createDataStore();
