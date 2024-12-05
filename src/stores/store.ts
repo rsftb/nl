@@ -10,11 +10,11 @@ function createDataStore() {
         subscribe,
         set,
         update,
-        setFirst: (data) => update((store) => {
+        setFirst: (data: HTMLButtonElement) => update((store) => {
             store.item1 = data;
             return store;
         }),
-        setSecond: (data) => update((store) => {
+        setSecond: (data: HTMLButtonElement) => update((store) => {
             store.item2 = data;
             return store;
         }),

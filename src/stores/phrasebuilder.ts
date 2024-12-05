@@ -1,13 +1,21 @@
 import { writable } from "svelte/store";
 
-export function f() {
-    const { subscribe, set, update } = writable<string>();
+type PhraseData = readonly [HTMLButtonElement, () => void];
+
+export function fPhraseParserStore() {
+    const { subscribe, set, update } = writable<PhraseData[]>([]);
 
     return {
         subscribe,
-        set,
-        update
+        push: (data: PhraseData) => update((store) => {
+            store.push(data);
+            return store;
+        }),
+        pop: () => update((store) => {
+            store.pop();
+            return store;
+        })
     };
 }
 
-export const storePhraseParser = f();
+export const storePhraseParser = fPhraseParserStore();
