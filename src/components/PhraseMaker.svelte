@@ -1,6 +1,11 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { dataStore } from '../stores/store';
+    import { storePhraseParser } from '../stores/phrasebuilder';
+
+    storePhraseParser.subscribe(value => {
+        console.log("PhraseMaker storePhraseBuilder: ", value);
+    });
 
     let phrasebuilder_ul_bind: HTMLUListElement;
 

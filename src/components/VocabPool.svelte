@@ -12,7 +12,6 @@
         console.log("VocabPool mounted");
         dataStore.setFirst(vocabsection_bind);
     });
-
 </script>
 
 <div bind:this={vocabsection_bind} id="vocabsection" class="w-fit max-w-[50%] flex-wrap flex justify-center mx-auto bg-gray-400 rounded-md p-3">
