@@ -1,9 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { dataStore } from '../stores/store';
-    import { storePhraseParser } from '../stores/phrasebuilder';
+    import { sDonkeyStore } from '../stores/donkeystore';
+    import { sPhraseParserStore } from '../stores/phraseparserstore';
 
-    storePhraseParser.subscribe(value => {
+    sPhraseParserStore.subscribe(value => {
         console.log("PhraseMaker storePhraseBuilder: ", value);
     });
 
@@ -11,7 +11,7 @@
 
     onMount(() => {
         console.log("PhraseMaker mounted");
-        dataStore.setSecond(phrasebuilder_ul_bind);
+        sDonkeyStore.setSecond(phrasebuilder_ul_bind);
     });
 </script>
 

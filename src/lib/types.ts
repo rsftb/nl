@@ -1,8 +1,10 @@
 // types.ts
 
-export interface WordType {
-    dutch: string;
-    english: string;
-    type: string;
-    handler?: () => void;
-}
+export type WordData_T = {
+    dutch: string,
+    english: string,
+    type: string,
+    handler: null | (() => void)
+};
+
+export type Section = readonly [HTMLButtonElement, WordData_T];

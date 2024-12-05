@@ -1,9 +1,11 @@
+// donkeystore.ts
+
 import { writable } from "svelte/store";
 
-function createDataStore() {
+function createDonkeyStore() {
     const { subscribe, set, update } = writable({
-        item1: undefined,
-        item2: undefined,
+        item1: undefined, // HTMLUListElement
+        item2: undefined, // HTMLUListElement
     });
 
     return {
@@ -21,4 +23,4 @@ function createDataStore() {
     };
 }
 
-export const dataStore = createDataStore();
+export const sDonkeyStore = createDonkeyStore();

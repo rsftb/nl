@@ -1,14 +1,15 @@
-<script>
+<script lang="ts">
     import { onMount } from 'svelte';
     import { get } from 'svelte/store';
-    import { dataStore } from '../stores/store';
+    import { sDonkeyStore } from '../stores/donkeystore';
 
     import VocabPool from '../components/VocabPool.svelte';
     import PhraseMaker from '../components/PhraseMaker.svelte';
+	import type { WordData_T } from '$lib/types';
 
     onMount(() => {
         console.log("Page mounted");
-        console.log(get(dataStore));
+        console.log(get(sDonkeyStore));
         console.log("\n");
     });
 
@@ -17,7 +18,7 @@
     }
 
     // Turn into readable store? Retrieve from database?
-    let vocab = [
+    let vocab: WordData_T[] = [
         { dutch: "Hallo!", english: "Hello!", type: "FU", handler: null},
         { dutch: "Goede-", english: "Good-", type: "FU", handler: AA},
         { dutch: "-morgen", english: "-morning", type: "FU", handler: null},
