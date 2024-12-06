@@ -16,13 +16,15 @@ export function f(e: MouseEvent, worddata: WordData_T) {
 
     if (data.item1.contains(target))
     {
-        sPhraseParserStore.push([target as HTMLButtonElement, {}]);
+        sPhraseParserStore.push([target as HTMLButtonElement, worddata]);
+        worddata.handler ? worddata.handler() : null;
         // Switch button to PhraseMaker container
         // Pass handler to PhraseMaker parser
         data.item2.appendChild(target);
     }
     else if (data.item2.contains(e.target as Node))
     {
+        sPhraseParserStore.pop();
         // Switch button to PhraseBuilder container
         // Remove handler from PhraseMaker parser
         data.item1.appendChild(target);

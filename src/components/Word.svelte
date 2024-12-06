@@ -4,6 +4,7 @@
     import type { WordData_T } from '../lib/types';
 
     export let wordData: WordData_T;
+    console.log("Word: ", wordData);
     let button: HTMLButtonElement;
 </script>
 

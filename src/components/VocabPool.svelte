@@ -18,7 +18,7 @@
 <div id="vocabsection-container" class="w-fit flex justify-center mx-auto bg-gray-400 rounded-md p-3">
     <ul bind:this={vocabsection_ul_bind} id="vocabsection-ul" class="bg-red-600 flex flex-wrap justify-items-center mx-auto h-10 rounded-lg">
         {#each vocab as word}
-            <Word {word} />
+            <Word wordData={word} />
         {/each}
     </ul>
 </div>
