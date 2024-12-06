@@ -5,6 +5,10 @@
 
     sPhraseParserStore.subscribe(arrWords => {
         console.log("PhraseMaker storePhraseBuilder: ", arrWords);
+        if (!arrWords.length) return;
+        let currentButton = arrWords[arrWords.length - 1][0];
+        let currentData = arrWords[arrWords.length - 1][1];
+        currentData.handler ? currentData.handler() : null;
     });
 
     let phrasebuilder_ul_bind: HTMLUListElement;

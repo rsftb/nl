@@ -14,7 +14,7 @@
     });
 
     function pfPre() {
-        console.log("Foo");
+        console.log("pfPre");
     }
 
     // Turn into readable store? Retrieve from database?

@@ -17,7 +17,7 @@ export function parseWord(e: MouseEvent, worddata: WordData_T) {
     if (data.item1.contains(target))
     {
         sPhraseParserStore.push([target as HTMLButtonElement, worddata]);
-        worddata.handler ? worddata.handler() : null;
+        //worddata.handler ? worddata.handler() : null;
         data.item2.appendChild(target);
     }
     else if (data.item2.contains(e.target as Node))
