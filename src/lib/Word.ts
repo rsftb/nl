@@ -8,7 +8,7 @@ import { sPhraseParserStore } from "../stores/phraseparserstore";
 import type { WordData_T } from "./types";
 
 
-export function f(e: MouseEvent, worddata: WordData_T) {
+export function parseWord(e: MouseEvent, worddata: WordData_T) {
     const data = get(sDonkeyStore);
     const target = e.target as Node;
 
@@ -18,15 +18,11 @@ export function f(e: MouseEvent, worddata: WordData_T) {
     {
         sPhraseParserStore.push([target as HTMLButtonElement, worddata]);
         worddata.handler ? worddata.handler() : null;
-        // Switch button to PhraseMaker container
-        // Pass handler to PhraseMaker parser
         data.item2.appendChild(target);
     }
     else if (data.item2.contains(e.target as Node))
     {
         sPhraseParserStore.pop();
-        // Switch button to PhraseBuilder container
-        // Remove handler from PhraseMaker parser
         data.item1.appendChild(target);
     }
     else

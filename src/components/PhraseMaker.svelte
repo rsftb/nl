@@ -3,8 +3,8 @@
     import { sDonkeyStore } from '../stores/donkeystore';
     import { sPhraseParserStore } from '../stores/phraseparserstore';
 
-    sPhraseParserStore.subscribe(value => {
-        console.log("PhraseMaker storePhraseBuilder: ", value);
+    sPhraseParserStore.subscribe(arrWords => {
+        console.log("PhraseMaker storePhraseBuilder: ", arrWords);
     });
 
     let phrasebuilder_ul_bind: HTMLUListElement;

@@ -13,14 +13,14 @@
         console.log("\n");
     });
 
-    function AA() {
+    function pfPre() {
         console.log("Foo");
     }
 
     // Turn into readable store? Retrieve from database?
     let vocab: WordData_T[] = [
         { dutch: "Hallo!", english: "Hello!", type: "FU", handler: null},
-        { dutch: "Goede-", english: "Good-", type: "FU", handler: AA},
+        { dutch: "Goede-", english: "Good-", type: "FU", handler: pfPre},
         { dutch: "-morgen", english: "-morning", type: "FU", handler: null},
         { dutch: "-middag", english: "-afternoon", type: "FU", handler: null},
         { dutch: "-avond", english: "-evening", type: "FU", handler: null},
