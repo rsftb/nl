@@ -1,15 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { sDonkeyStore } from '../stores/donkeystore';
-    import { sPhraseParserStore } from '../stores/phraseparserstore';
-
-    sPhraseParserStore.subscribe(arrWords => {
-        console.log("PhraseMaker storePhraseBuilder: ", arrWords);
-        if (!arrWords.length) return;
-        let currentButton = arrWords[arrWords.length - 1][0];
-        let currentData = arrWords[arrWords.length - 1][1];
-        currentData.handler ? currentData.handler() : null;
-    });
+    //import { sPhraseParserStore } from '../stores/phraseparserstore';
 
     let phrasebuilder_ul_bind: HTMLUListElement;
 
