@@ -14,7 +14,6 @@
         console.log(get(sDonkeyStore));
         console.log("\n");
     });
-
 </script>
 
 <main id="main" class="h-screen content-center bg-slate-500">

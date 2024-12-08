@@ -5,8 +5,8 @@ declare global {
 		// interface Error {}
 		// interface Locals {}
 		interface PageData {
-			page: number,
-			fSetExerciseVocab?: (nExercise: number) => void
+			arrActiveConns: [/* Connection Types */],
+			fPreloadExercise?: (nExercise: number) => void,
 		}
 		// interface PageState {}
 		// interface Platform {}
