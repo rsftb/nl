@@ -27,7 +27,6 @@ class PhraseParser {
     }
 }
 
-
 // Turn into a readable?
 export function createPhraseParserStore() {
     const { subscribe, update } = writable<PhraseParser>(new PhraseParser());
