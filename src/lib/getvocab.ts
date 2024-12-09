@@ -1,6 +1,6 @@
 import type { WordData_T } from "./types";
 
-function assembleVocab(words: [number]) : WordData_T[] {
+export function assembleVocab(words: [number]) : WordData_T[] {
     console.log("assembleVocab(words: [number])");
 
     return []

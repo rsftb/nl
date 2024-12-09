@@ -9,8 +9,11 @@
 
     import { getStores, navigating, page, updated } from '$app/stores';
 
+    let { data } = $props();
+
     onMount(() => {
         console.log("Page mounted");
+        console.log(`Composer/+page.svelte: ${data.data.value}`);
         console.log(get(sDonkeyStore));
         console.log("\n");
     });

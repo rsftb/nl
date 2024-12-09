@@ -1,22 +1,15 @@
 <script lang="ts">
+	import { preloadData } from '$app/navigation';
     import { onMount } from 'svelte';
+
+    let { data } = $props();
+    data.data.value = 1;
 
     onMount(() => {
         console.log("Page mounted");
+        console.log(`Exercises/+page.svelte: ${data.data.value}`);
     });
 
-
-    function fPreloadExercise(num: number) : void
-    {
-        if (num === 1)
-        {
-            console.log("Preloading exercise 1");
-        }
-        else if (num === 2)
-        {
-            console.log("Preloading exercise 2");
-        }
-    }
 </script>
 
 <main>
