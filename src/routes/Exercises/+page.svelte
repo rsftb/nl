@@ -25,7 +25,7 @@
     </header>
 
     <ul class="my-5">
-        <li><a href="/Composer/1">Test exercise 1</a></li>
-        <li><a href="/Composer/2">Test exercise 2</a></li>
+        <li><a href="/Composer">Test exercise 1</a></li>
+        <li><a href="/Composer">Test exercise 2</a></li>
     </ul>
 </main>
