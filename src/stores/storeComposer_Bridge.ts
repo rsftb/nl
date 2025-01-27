@@ -1,8 +1,8 @@
-// donkeystore.ts
+// storeComposer_Bridge.ts
 
 import { writable } from "svelte/store";
 
-function createDonkeyStore() {
+function storeComposer_Bridge() {
     const { subscribe, set, update } = writable({
         item1: undefined, // HTMLUListElement
         item2: undefined, // HTMLUListElement
@@ -23,4 +23,4 @@ function createDonkeyStore() {
     };
 }
 
-export const sDonkeyStore = createDonkeyStore();
+export const storeBridge = storeComposer_Bridge();

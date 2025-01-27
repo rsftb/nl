@@ -1,6 +1,8 @@
+<!-- $components/PhraseMaker.svelte -->
+
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { sDonkeyStore } from '../stores/donkeystore';
+    import { sDonkeyStore } from '../stores/storeComposer_Bridge';
     //import { sPhraseParserStore } from '../stores/phraseparserstore';
 
     let phrasebuilder_ul_bind: HTMLUListElement;

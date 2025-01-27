@@ -1,7 +1,9 @@
+<!-- $components/VocabPool.svelte -->
+
 <script lang="ts">
     import { onMount } from 'svelte';
-    import { sDonkeyStore } from '../stores/donkeystore';
-    import type { WordData_T } from '../lib/types';
+    import { sDonkeyStore } from '$stores/storeComposer_Bridge';
+    import type { WordData_T } from '$lib/types';
     import { get } from "svelte/store";
 
     import Word from './Word.svelte';

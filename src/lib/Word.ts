@@ -1,9 +1,9 @@
-// Word.ts
+// $lib/Word.ts
 
 import { get } from "svelte/store";
 
-import { sDonkeyStore } from "../stores/donkeystore";
-import { sPhraseParserStore } from "../stores/phraseparserstore";
+import { sDonkeyStore } from "$stores/storeComposer_Bridge";
+import { sPhraseParserStore } from "$stores/storeComposer_Parser";
 
 import type { WordData_T } from "./types";
 

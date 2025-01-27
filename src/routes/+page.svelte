@@ -1,3 +1,5 @@
+<!-- $routes/Exercises/+page.svelte -->
+
 <script lang="ts">
 </script>
 

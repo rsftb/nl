@@ -1,15 +1,15 @@
-// phrasebuilder.ts
+// $stores/ComposerStore_Parser.ts
 
 import { writable } from "svelte/store";
-import type { Section } from "$lib/types";
+import type { Section_T } from "$lib/types";
 
 
 class PhraseParser {
-    store: Section[] = [];
+    store: Section_T[] = [];
 
     constructor() {}
 
-    push(data: Section) {
+    push(data: Section_T) {
         this.store.push(data);
         console.log(this.store);
     }
@@ -22,7 +22,7 @@ class PhraseParser {
             }
         }
         */
-        const index = this.store.findIndex((section) => section[0] === button);
+        const index = this.store.findIndex((Section_T) => Section_T[0] === button);
         this.store.splice(index, 1);
     }
 }
@@ -43,7 +43,7 @@ export function createPhraseParserStore() {
     });
 
     return {
-        push: (data: Section) => update((store) => {
+        push: (data: Section_T) => update((store) => {
             store.push(data);
             return store;
         }),

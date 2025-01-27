@@ -1,7 +1,5 @@
 {
-    "files.exclude": {
-        "{s,[!s]*,sr,s[!r]*,sr[!c]*,src?*}": true
-    },
+    "files.exclude": {},
     "folder-scopes.scopes": {
         "Focus": {
             "nl": {

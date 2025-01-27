@@ -1,15 +1,17 @@
+<!-- $routes/Composer/+page.svelte -->
+
 <script lang="ts">
     import { onMount } from 'svelte';
     import { get } from 'svelte/store';
-    import { sDonkeyStore } from '$stores/donkeystore';
+    import { sDonkeyStore } from '$stores/storeComposer_Bridge.js';
 
-    import { vocab } from '$lib/getvocab';
     import VocabPool from '$components/VocabPool.svelte';
     import PhraseMaker from '$components/PhraseMaker.svelte';
 
-    import { getStores, navigating, page, updated } from '$app/stores';
+    // import { getStores, navigating, page, updated } from '$app/stores';
 
     let { data } = $props();
+    const vocab = data.data.value;
 
     onMount(() => {
         console.log("Page mounted");

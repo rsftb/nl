@@ -1,4 +1,4 @@
-// types.ts
+// $lib/types.ts
 
 export type WordData_T = {
     dutch: string,
@@ -7,4 +7,6 @@ export type WordData_T = {
     handler: null | (() => void)
 };
 
-export type Section = readonly [HTMLButtonElement, WordData_T];
+export type Exercise_T = { [key: number]: WordData_T[]};
+
+export type Section_T = readonly [HTMLButtonElement, WordData_T];

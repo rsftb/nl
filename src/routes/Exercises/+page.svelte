@@ -1,15 +1,17 @@
+<!-- $routes/Exercises/+page.svelte -->
+
 <script lang="ts">
-	import { preloadData } from '$app/navigation';
+	//import { page } from '$app/stores';
+	//import { preloadData } from '$app/navigation';
+
+    import { serverGetExercise } from '$lib/getvocab';
     import { onMount } from 'svelte';
 
-    let { data } = $props();
-    data.data.value = 1;
+    const { data } = $props();
 
     onMount(() => {
-        console.log("Page mounted");
         console.log(`Exercises/+page.svelte: ${data.data.value}`);
     });
-
 </script>
 
 <main>
@@ -18,7 +20,7 @@
     </header>
 
     <ul class="my-5">
-        <li><a href="/Composer">Test exercise 1</a></li>
-        <li><a href="/Composer">Test exercise 2</a></li>
+        <li><a onclick={async () => serverGetExercise(1).then((vocab) => {data.data.value = vocab}, (error: Function) => {error()})} href="/Composer">Test exercise 1</a></li>
+        <li><a onclick={async () => serverGetExercise(2).then((vocab) => {data.data.value = vocab}, (error: Function) => {error()})} href="/Composer">Test exercise 2</a></li>
     </ul>
 </main>
