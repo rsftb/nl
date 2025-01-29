@@ -1,25 +1,22 @@
 <!-- $components/VocabPool.svelte -->
 
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { sDonkeyStore } from '$stores/storeComposer_Bridge';
-    import type { WordData_T } from '$lib/types';
-    import { get } from "svelte/store";
-
     import Word from './Word.svelte';
+    import { getContext, onMount } from 'svelte';
+    import type { ExerciseContext_T } from '$lib/types';
 
-    export let vocab: WordData_T[];
+    let ExerciseContext: ExerciseContext_T = getContext('ExerciseContext');
     let vocabsection_ul_bind: HTMLUListElement;
 
     onMount(() => {
-        console.log("VocabPool mounted");
-        sDonkeyStore.setFirst(vocabsection_ul_bind);
+        ExerciseContext.VP = vocabsection_ul_bind;
+        console.log(ExerciseContext.Vocab);
     });
 </script>
 
 <div id="vocabsection-container" class="w-fit flex justify-center mx-auto bg-gray-400 rounded-md p-3">
     <ul bind:this={vocabsection_ul_bind} id="vocabsection-ul" class="bg-red-600 flex flex-wrap justify-items-center mx-auto h-10 rounded-lg">
-        {#each vocab as word}
+        {#each ExerciseContext.Vocab as word}
             <Word wordData={word} />
         {/each}
     </ul>

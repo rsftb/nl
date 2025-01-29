@@ -1,15 +1,14 @@
 <!-- $components/PhraseMaker.svelte -->
 
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { sDonkeyStore } from '../stores/storeComposer_Bridge';
-    //import { sPhraseParserStore } from '../stores/phraseparserstore';
+    import { getContext, onMount } from "svelte";
+    import type { ExerciseContext_T } from '$lib/types';
 
+    let ExerciseContext: ExerciseContext_T = getContext('ExerciseContext');
     let phrasebuilder_ul_bind: HTMLUListElement;
 
     onMount(() => {
-        console.log("PhraseMaker mounted");
-        sDonkeyStore.setSecond(phrasebuilder_ul_bind);
+        ExerciseContext.PB = phrasebuilder_ul_bind;
     });
 </script>
 

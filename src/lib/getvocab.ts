@@ -21,8 +21,9 @@ function pfPre() {
     console.log("Prefix");
 }
 
-export async function serverGetExercise(n: number) : Promise<WordData_T[]> {
+export const serverGetExercise = async (n: number) : Promise<WordData_T[]> => {
     const exercise = vocab[n];
+    console.log(exercise);
 
     if (exercise === undefined)
         throw new Error("Exercise not found");

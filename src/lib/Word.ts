@@ -1,14 +1,9 @@
 // $lib/Word.ts
 
-import { get } from "svelte/store";
-
-import { sDonkeyStore } from "$stores/storeComposer_Bridge";
-import { sPhraseParserStore } from "$stores/storeComposer_Parser";
-
 import type { WordData_T } from "./types";
 
 
-export function parseWord(e: MouseEvent, worddata: WordData_T) {
+export function moveWord(e: MouseEvent, worddata: WordData_T) {
     const donkeystore = get(sDonkeyStore);
     const target = e.target as Node;
 

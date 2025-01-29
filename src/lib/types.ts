@@ -10,3 +10,9 @@ export type WordData_T = {
 export type Exercise_T = { [key: number]: WordData_T[]};
 
 export type Section_T = readonly [HTMLButtonElement, WordData_T];
+
+export type ExerciseContext_T = {
+    Vocab: WordData_T[],
+    PB: null | HTMLUListElement,
+    VP: null | HTMLUListElement
+};
